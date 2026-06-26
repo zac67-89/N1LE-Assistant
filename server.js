@@ -9,6 +9,8 @@ const notion = new Client({
   auth: process.env.NOTION_SECRET
 });
 
+const PORT = process.env.PORT || 3000;
+
 const DATABASES = {
   note: process.env.NOTES_DB,
   task: process.env.TASKS_DB,
@@ -79,6 +81,6 @@ app.post("/capture", async (req, res) => {
   }
 });
 
-app.listen(3000, () => {
+app.listen(PORT, () => {
   console.log("Running on port 3000");
 });
