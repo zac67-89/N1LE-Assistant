@@ -82,5 +82,5 @@ app.post("/capture", async (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log("Running on port 3000");
+  console.log("Server is running on port ${PORT}");
 });
